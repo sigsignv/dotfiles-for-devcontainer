@@ -41,6 +41,7 @@ deploy_config() {
     }
 }
 
-src="$(realpath -- "$(dirname -- "$0")")"
+srcDir="$(realpath -- "$(dirname -- "$0")")"
 
-deploy_config "${src}/git/ignore" "${XDG_CONFIG_HOME}/git/ignore"
+deploy_config "${srcDir}/git/ignore" "${XDG_CONFIG_HOME}/git/ignore"
+deploy_config "${srcDir}/.npmrc" "${HOME}/.npmrc"
