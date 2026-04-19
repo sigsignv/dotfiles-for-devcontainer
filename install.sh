@@ -45,3 +45,6 @@ srcDir="$(realpath -- "$(dirname -- "$0")")"
 
 deploy_config "${srcDir}/git/ignore" "${XDG_CONFIG_HOME}/git/ignore"
 deploy_config "${srcDir}/.npmrc" "${HOME}/.npmrc"
+deploy_config "${srcDir}/profile.d" "${HOME}/.profile.d"
+
+${srcDir}/scripts/install-loader.sh
